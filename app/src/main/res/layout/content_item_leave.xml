@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_height="150dp"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin_20"
+    android:elevation="5dp"
+    app:cardCornerRadius="23dp"
+
+    android:backgroundTint="@color/colorGreen"
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="8"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:padding="@dimen/margin_20"
+            >
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type:"
+                android:textSize="@dimen/text_standard_16"
+                android:textColor="#FFFFFF"
+                android:layout_marginRight="3dp"
+
+                ></TextView>
+            <TextView
+                android:id="@+id/tv_leavetype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leave type"
+                android:textSize="@dimen/text_standard_16"
+                android:textColor="#FFFFFF"
+                android:layout_toRightOf="@id/lbl_leavetype"
+
+                ></TextView>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:textSize="@dimen/text_standard_16"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginRight="3dp"
+
+                    ></TextView>
+                <TextView
+                    android:id="@+id/tv_leavedate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leave date"
+                    android:textSize="@dimen/text_standard_16"
+                    android:textColor="#FFFFFF"
+                    android:layout_toRightOf="@id/lbl_leavetype"
+
+                    ></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Requested:"
+                    android:textSize="@dimen/text_standard_16"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginRight="3dp"
+
+                    ></TextView>
+                <TextView
+                    android:id="@+id/tv_date_requested"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leave requested"
+                    android:textSize="@dimen/text_standard_16"
+                    android:textColor="#FFFFFF"
+                    android:layout_toRightOf="@id/lbl_leavetype"
+
+                    ></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lbl_leavetype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="# of days:"
+                    android:textSize="@dimen/text_standard_16"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginRight="3dp"
+
+                    ></TextView>
+                <TextView
+                    android:id="@+id/tv_number_of_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textSize="@dimen/text_standard_16"
+                    android:textColor="#FFFFFF"
+                    android:layout_toRightOf="@id/lbl_leavetype"
+
+                    ></TextView>
+
+            </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comments:"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/text_standard_16"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginRight="3dp"
+
+                    ></TextView>
+                <TextView
+                    android:id="@+id/tv_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Leave type"
+                    android:textSize="8sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/shape_rectangle"
+                    android:layout_toRightOf="@id/lbl_leavetype"
+
+                    ></TextView>
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            >
+            <TextView
+                android:id="@+id/lbl_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35dp"
+                android:layout_centerInParent="true"
+                android:text="Status:"
+                android:textColor="#FFF"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_status"
+                android:layout_centerInParent="true"
+                android:textSize="26dp"
+                android:textColor="@color/colorGrey"
+                android:text="Approved"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

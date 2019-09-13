@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/fm_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom_nav"
+        android:background="@color/colorPrimaryDark">
+
+    </FrameLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/rl_bottom_nav"
+            android:background="@color/colorGreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:weightSum="4">
+
+            <ImageButton
+                android:id="@+id/ib_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_home"
+                android:background="@null"
+                android:padding="@dimen/margin_20"
+                android:tint="@color/colorGrey"
+                />
+            <ImageButton
+                android:id="@+id/ib_leave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_time_to_leave"
+                android:background="@null"
+                android:padding="@dimen/margin_20"
+                android:tint="@color/colorGrey"
+                android:clickable="true"
+                />
+            <ImageButton
+                android:id="@+id/ib_overtime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_timer"
+                android:background="@null"
+                android:padding="@dimen/margin_20"
+                android:tint="@color/colorGrey"
+                />
+            <ImageButton
+                android:id="@+id/ib_profile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_person"
+                android:background="@null"
+                android:padding="@dimen/margin_20"
+                android:tint="@color/colorGrey"
+                />
+
+        </LinearLayout>
+
+</RelativeLayout>
+

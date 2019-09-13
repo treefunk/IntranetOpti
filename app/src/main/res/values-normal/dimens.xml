@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_standard_16">16sp</dimen>
+
+    <dimen name="image_height_50">50dp</dimen>
+    <dimen name="image_height_100">100dp</dimen>
+
+    <dimen name="margin_20">15dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="margin_200">200dp</dimen>
+
+</resources>
