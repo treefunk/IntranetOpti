@@ -2,6 +2,21 @@
     <string name="app_name">IntranetOpti</string>
     <string name="title_activity_login">LoginActivity</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="leave_label">Leave</string>
+    <string name="overtime_label">Overtime</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- User details Label -->
+
+    <string name="label_user_id">User Id:</string>
+    <string name="label_first_name">First Name:</string>
+    <string name="label_last_name">Last Name:</string>
+    <string name="label_position">Position:</string>
+    <string name="label_home_address">Home Address:</string>
+    <string name="label_home_number">Home Number:</string>
+    <string name="label_mobile_number">Mobile Number:</string>
+
 </resources>

@@ -4,6 +4,8 @@
 
     <dimen name="image_height_50">100dp</dimen>
     <dimen name="image_height_100">200dp</dimen>
+    <dimen name="image_height_400">800dp</dimen>
+
 
     <dimen name="margin_20">40dp</dimen>
     <dimen name="margin_60">120dp</dimen>

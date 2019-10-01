@@ -13,6 +13,8 @@ import com.myoptimind.intranet.AppConstants;
 import com.myoptimind.intranet.BaseActivity;
 import com.myoptimind.intranet.BaseModel;
 import com.myoptimind.intranet.main.activity.HomeScreen;
+import com.myoptimind.intranet.main.database.UserTable;
+import com.myoptimind.intranet.main.handler.UserDetails;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -52,7 +54,12 @@ public class LoginModel extends BaseModel {
                                      JSONObject res = new JSONObject(response);
                                      JSONObject user = res.getJSONObject("user");
 
+                                     UserTable userTable = new UserTable(mActivity);
+
+                                     UserDetails userDetails = UserDetails.createFromJSONObject(user);
+
                                      storeUserDetailsInSp(user);
+                                     userTable.add(userDetails);
 
                                  }catch(JSONException exception){
                                      exception.printStackTrace();
@@ -93,6 +100,10 @@ public class LoginModel extends BaseModel {
         // end of post
 
 
+
+    }
+
+    private void addUserToDB(JSONObject user) {
 
     }
 }

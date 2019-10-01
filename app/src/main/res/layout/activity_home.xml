@@ -1,72 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <FrameLayout
-        android:id="@+id/fm_container"
+    <androidx.drawerlayout.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/rl_bottom_nav"
-        android:background="@color/colorPrimaryDark">
+    android:fitsSystemWindows="true"
+        
+        >
 
-    </FrameLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+            >
 
-
-
-
-        <LinearLayout
-            android:id="@+id/rl_bottom_nav"
-            android:background="@color/colorGreen"
+        <include
+            android:id="@+id/layout_toolbar"
+            layout="@layout/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_alignParentBottom="true"
-            android:weightSum="4">
 
-            <ImageButton
-                android:id="@+id/ib_home"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/ic_home"
-                android:background="@null"
-                android:padding="@dimen/margin_20"
-                android:tint="@color/colorGrey"
-                />
-            <ImageButton
-                android:id="@+id/ib_leave"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/ic_time_to_leave"
-                android:background="@null"
-                android:padding="@dimen/margin_20"
-                android:tint="@color/colorGrey"
-                android:clickable="true"
-                />
-            <ImageButton
-                android:id="@+id/ib_overtime"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/ic_timer"
-                android:background="@null"
-                android:padding="@dimen/margin_20"
-                android:tint="@color/colorGrey"
-                />
-            <ImageButton
-                android:id="@+id/ib_profile"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/ic_person"
-                android:background="@null"
-                android:padding="@dimen/margin_20"
-                android:tint="@color/colorGrey"
-                />
+            />
 
-        </LinearLayout>
 
-</RelativeLayout>
+
+        <FrameLayout
+                android:id="@+id/fm_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/rl_bottom_nav"
+                android:layout_below="@id/layout_toolbar"
+                android:background="@color/colorPrimaryDark">
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_bottom_nav"
+                android:background="@color/colorGreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:weightSum="4">
+
+                <ImageButton
+                    android:id="@+id/ib_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_home"
+                    android:background="@null"
+                    android:padding="@dimen/margin_20"
+                    android:tint="@color/colorGrey"
+                    />
+                <ImageButton
+                    android:id="@+id/ib_leave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_time_to_leave"
+                    android:background="@null"
+                    android:padding="@dimen/margin_20"
+                    android:tint="@color/colorGrey"
+                    android:clickable="true"
+                    />
+                <ImageButton
+                    android:id="@+id/ib_overtime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_timer"
+                    android:background="@null"
+                    android:padding="@dimen/margin_20"
+                    android:tint="@color/colorGrey"
+                    />
+                <ImageButton
+                    android:id="@+id/ib_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_person"
+                    android:background="@null"
+                    android:padding="@dimen/margin_20"
+                    android:tint="@color/colorGrey"
+                    />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nvView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@android:color/white"
+            app:menu="@menu/drawer_view"
+            app:headerLayout="@layout/nav_header">
+
+        </com.google.android.material.navigation.NavigationView>
+
+
+
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
 

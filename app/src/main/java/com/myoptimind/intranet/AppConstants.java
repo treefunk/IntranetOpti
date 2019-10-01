@@ -8,6 +8,9 @@ public class AppConstants {
 
 
     public static final String SP_USER_DETAILS       = "UserDetails";
+    public static final String SP_USER_ID_KEY        = "user_id";
+
+    public static String FRAG_CURRENT                = "";
 
     public static String getAPI_BASE_URL(String url) {
         return API_BASE_URL + url;

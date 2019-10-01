@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView android:layout_height="150dp"
+<androidx.cardview.widget.CardView android:layout_height="wrap_content"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="@dimen/margin_20"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
     android:elevation="5dp"
-    app:cardCornerRadius="23dp"
+    app:cardCornerRadius="6dp"
 
     android:backgroundTint="@color/colorGreen"
 
@@ -13,14 +16,14 @@
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="8"
         >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="3"
             android:padding="@dimen/margin_20"
@@ -70,10 +73,12 @@
                     android:textSize="@dimen/text_standard_16"
                     android:textColor="#FFFFFF"
                     android:layout_toRightOf="@id/lbl_leavetype"
-
+                    android:lines="1"
+                    android:ellipsize="end"
                     ></TextView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -142,7 +147,6 @@
                     android:text="Leave type"
                     android:textSize="8sp"
                     android:textColor="#FFFFFF"
-                    android:background="@drawable/shape_rectangle"
                     android:layout_toRightOf="@id/lbl_leavetype"
 
                     ></TextView>
@@ -150,17 +154,27 @@
 
 
         </LinearLayout>
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="1.5dp"
+            android:background="#FFF"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
 
+        </View>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="5"
+            android:gravity="center"
+
             >
+
             <TextView
                 android:id="@+id/lbl_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="35dp"
+                android:textSize="20dp"
                 android:layout_centerInParent="true"
                 android:text="Status:"
                 android:textColor="#FFF"
@@ -173,9 +187,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lbl_status"
                 android:layout_centerInParent="true"
-                android:textSize="26dp"
+                android:textSize="20dp"
                 android:textColor="@color/colorGrey"
                 android:text="Approved"
+
                 />
 
         </RelativeLayout>

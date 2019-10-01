@@ -82,6 +82,8 @@ public class LeaveFragment extends BaseFragment {
 
                                          JSONArray arr = res.getJSONArray("history");
 
+                                         Log.i(TAG,arr.toString(4));
+
                                          for (int i=0; i < arr.length(); i++) {
 
                                              Leave leave = new Leave();
@@ -94,6 +96,10 @@ public class LeaveFragment extends BaseFragment {
                                              leave.setStatus(obj.getString("status"));
 
                                              leaves.add(leave);
+
+                                             LeaveListAdapter adapter = new LeaveListAdapter(mActivity,leaves);
+                                             mRecyclerView.setAdapter(adapter);
+
 
                                          }
                                      }catch(JSONException e){
@@ -109,8 +115,6 @@ public class LeaveFragment extends BaseFragment {
                                  }
                              });
 
-            LeaveListAdapter adapter = new LeaveListAdapter(leaves);
-            mRecyclerView.setAdapter(adapter);
 
 
 

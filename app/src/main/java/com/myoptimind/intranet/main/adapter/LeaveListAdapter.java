@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.myoptimind.intranet.BaseActivity;
 import com.myoptimind.intranet.R;
 import com.myoptimind.intranet.main.handler.Leave;
 
@@ -17,32 +19,13 @@ import java.util.List;
 public class LeaveListAdapter extends RecyclerView.Adapter<LeaveListAdapter.LeaveViewHolder> {
 
     private List<Leave> mLeaves;
+    private BaseActivity mActivity;
 
-    class LeaveViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView mType,
-                         mDate,
-                         mRequested,
-                         mNumOfDays,
-                         mComments,
-                         mStatus;
 
-        public LeaveViewHolder(@NonNull View itemView) {
-
-            super(itemView);
-
-            mType      = itemView.findViewById(R.id.tv_leavetype);
-            mDate      = itemView.findViewById(R.id.tv_leavedate);
-            mRequested = itemView.findViewById(R.id.tv_date_requested);
-            mNumOfDays = itemView.findViewById(R.id.tv_number_of_days);
-            mComments  = itemView.findViewById(R.id.tv_comments);
-            mStatus    = itemView.findViewById(R.id.tv_status);
-
-        }
-    }
-
-    public LeaveListAdapter(List<Leave> leaves) {
+    public LeaveListAdapter(BaseActivity activity,List<Leave> leaves) {
         mLeaves = leaves;
+        mActivity = activity;
     }
 
     @NonNull
@@ -72,6 +55,40 @@ public class LeaveListAdapter extends RecyclerView.Adapter<LeaveListAdapter.Leav
     public int getItemCount() {
         return mLeaves.size();
     }
+
+    class LeaveViewHolder extends RecyclerView.ViewHolder{
+
+        private TextView mType,
+                mDate,
+                mRequested,
+                mNumOfDays,
+                mComments,
+                mStatus;
+
+
+
+        public LeaveViewHolder(@NonNull View itemView) {
+
+            super(itemView);
+
+            mType      = itemView.findViewById(R.id.tv_leavetype);
+            mDate      = itemView.findViewById(R.id.tv_leavedate);
+            mRequested = itemView.findViewById(R.id.tv_date_requested);
+            mNumOfDays = itemView.findViewById(R.id.tv_number_of_days);
+            mComments  = itemView.findViewById(R.id.tv_comments);
+            mStatus    = itemView.findViewById(R.id.tv_status);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(mActivity,mLeaves.get(getAdapterPosition()).getDateRequested(), Toast.LENGTH_LONG).show();
+                }
+            });
+
+        }
+    }
+
+
 
 
 }
